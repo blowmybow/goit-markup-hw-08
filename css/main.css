@@ -798,18 +798,16 @@ ul {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) {
-  .clients-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .clients-list__item {
     flex-basis: calc((100% - 30px) / 2);
   }

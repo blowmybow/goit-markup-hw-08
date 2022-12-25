@@ -1,15 +1,13 @@
 .clients-list {
-    
-    @include tel {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;}
+        gap: 30px;
 }
 .clients-list__item {
     &:not(:last-child) {
             margin-bottom: 30px;
         }
-    @include tel {
+    @media screen and (max-width: 767px) {
         flex-basis: calc((100% - 30px) / 2);}
 
     @include tablet{
