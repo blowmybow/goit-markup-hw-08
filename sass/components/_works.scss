@@ -1,4 +1,7 @@
 .works {
+    @media screen and (max-width:1199px) {
+        display: none;
+    }
     padding-top: 0;
 }
 .works__list {
@@ -7,12 +10,10 @@
 .works__item:not(:last-child) {
     margin-right: 30px;
 }
-
 .works__thumb {
     position: relative;
     display: flex;
 }
-
 .works__text {
     position: absolute;
     background-color: $works-list-text-color;

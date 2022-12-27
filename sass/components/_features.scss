@@ -1,18 +1,18 @@
 .features-list {
-    @include tel {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-        }
 }
 .features-list__item{
-    &:not(:last-child) {
-            margin-bottom: 30px;
-        }
+    
+    @media screen and (max-width: 767px) {
+            flex-basis: 100%;
+    }
+
     @include tablet {
             flex-basis: calc((100% - 30px) / 2);
         }
-        @include desktop {
+    @include desktop {
             flex-basis: calc((100% - 90px) / 4);
         }
 }
