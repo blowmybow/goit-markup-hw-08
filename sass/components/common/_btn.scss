@@ -42,12 +42,9 @@
         margin-left: 10px;
     }
 
-    @include tablet {
-
-    }
-
     @include desktop {
         margin-left: 12px;
+        margin-top: 0;
     }
 }
 .modal-form__btn {
@@ -66,9 +63,17 @@
     border: 0;
     cursor: pointer;
     padding: 10px 52px;
-    margin-left: 112px;
+    margin-left: 45px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     display: inline-block;
+
+    @include tel{
+        margin-left: 85px;
+    }
+
+    @include desktop {
+        margin-left: 124px;
+    }
 }
 .modal__btn-close {
     position: absolute;
