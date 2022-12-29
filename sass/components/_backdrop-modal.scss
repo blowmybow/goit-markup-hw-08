@@ -114,19 +114,24 @@
 
 .modal-form__checkbox {
     margin-bottom: 30px;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.03em;
     color: $title-text-color;
-    margin-left: 8px;
+    // @include tel {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
 
     @include desktop {
         font-size: 14px;
         line-height: calc(24 / 14);
+        margin-left: 8px;
     }
 }
 .modal-form__checkbox-input {

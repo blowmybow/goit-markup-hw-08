@@ -1266,20 +1266,20 @@ ul {
 
 .modal-form__checkbox {
   margin-bottom: 30px;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-left: 8px;
 }
 @media screen and (min-width: 1200px) {
   .modal-form__checkbox {
     font-size: 14px;
     line-height: 1.7142857143;
+    margin-left: 8px;
   }
 }
 
