@@ -114,12 +114,13 @@
     flex-wrap: wrap;
     align-items: center;
     font-size: 10px;
-    line-height: calc(14 / 12);
+    line-height: calc(14 / 10);
     letter-spacing: 0.03em;
     color: $title-text-color;
 
     @include tel {
         font-size: 12px;
+        line-height: calc(14 / 12);
         flex-wrap: nowrap;
     }
     @include desktop {
@@ -157,7 +158,7 @@
 }
 .modal-form__checkbox-link {
     font-size: 10px;
-    line-height: calc(14 / 12);
+    line-height: calc(14 / 10);
     letter-spacing: 0.03em;
     text-decoration: underline solid $accent-color;
     text-underline-offset: 3px;
@@ -167,10 +168,11 @@
 
     @include tel {
         font-size: 12px;
+        line-height: calc(14 / 12);
     }
     
     @include desktop {
-            font-size: 14px;
-            line-height: calc(24 / 14);
+        font-size: 14px;
+        line-height: calc(24 / 14);
         }
 }

@@ -1,12 +1,25 @@
 .header {
     border-bottom: 1px solid $border-color;
 }
-.header > .container {
+.header>.container {
+    @include tablet {
+        display: flex;
+    }
+}
+.header-navigation{
     display: flex;
 }
 .header-navigation__list {
     display: flex;
-    margin-left: 93px;
+    // margin-left: 88px;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+    @include desktop {
+        margin-left: 93px;
+    }
 }
 .header-navigation__item {
     position: relative;
@@ -46,9 +59,22 @@
     display: flex;
     margin-left: auto;
     align-items: center;
+
+    @media screen and (max-width:767px) {
+            display: none;
+        }
+
+    @include tablet {
+        flex-wrap: wrap;
+        align-content: center;
+        padding-top: 21px;
+        margin-left: 100px;
+    }
 }
 .header-contact__list .header-contact__item+.header-contact__item {
-    margin-left: 50px;}
+    @include desktop {
+        margin-left: 50px;}
+    }
 .header-contact__mail {
     display: inline-flex;
     color: $title-text-color;
@@ -90,3 +116,6 @@
     fill: currentColor;
 }
 
+.btn-mob-menu .icon-cross {
+    display: none;
+}

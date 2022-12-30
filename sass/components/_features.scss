@@ -1,20 +1,15 @@
 .features-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .features-list__item{
-    
-    @media screen and (max-width: 767px) {
-            flex-basis: 100%;
-    }
+    width: 100%;
 
     @include tablet {
-            flex-basis: calc((100% - 30px) / 2);
-        }
+        flex-basis: calc((100% - 30px) / 2);}
     @include desktop {
-            flex-basis: calc((100% - 90px) / 4);
-        }
+        flex-basis: calc((100% - 90px) / 4);}
 }
 
 .features-list__content {
@@ -40,7 +35,6 @@
     
     @media screen and (max-width: 767px) {
         text-align: center;}
-
 }
 .features-list__content-text {
     color: $title-text-color;

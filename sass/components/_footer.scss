@@ -8,27 +8,23 @@
 
     @media screen and (max-width: 767px){
         flex-direction: column;
-        align-items: center;
-    }
+        align-items: center;}
 
     @include tablet {
-        flex-wrap: wrap;
+        flex-wrap: wrap;}
 }
-}
-
 .footer-logo-address {
     display: block;
     text-align: center;
     
     @include tablet {
         margin-right: 165px;
-        margin-left: 76px;
-    }
+        margin-left: 76px;}
 
     @include desktop {
         margin-right: 70px;
         margin-left: 0;
-    }
+}
 }
 .footer-address__list{
     display: block;
@@ -182,9 +178,6 @@
     &::placeholder {
         color: $fotter-contact-color;}
 
-//    @include tablet {
-//        min-width: 450px;
-//    }
     @include desktop {
         width: 358px;
     }
