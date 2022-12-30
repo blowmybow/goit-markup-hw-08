@@ -530,10 +530,8 @@ ul {
   border-bottom: 1px solid #ECECEC;
 }
 
-@media screen and (min-width: 768px) {
-  .header > .container {
-    display: flex;
-  }
+.header > .container {
+  display: flex;
 }
 
 .header-navigation {
@@ -660,10 +658,6 @@ ul {
 .header-contact__tel-icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.btn-mob-menu .icon-cross {
-  display: none;
 }
 
 .hero {
