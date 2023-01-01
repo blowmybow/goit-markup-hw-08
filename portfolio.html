@@ -16,7 +16,7 @@
   <body>
     <!-- header -->
     <header class="header">
-      <div class="container flex-cont">
+      <div class="container">
         <a class="header__logo" href="./index.html" lang="en" rel="noopener noreferrer nofollow">
           <span class="header__logo-color">Web</span>Studio</a
         >
@@ -30,10 +30,10 @@
                 >Студія</a
               >
             </li>
-            <li class="header-navigation__item current">
+            <li class="header-navigation__item">
               <a
                 href="./portfolio.html"
-                class="header-navigation__link"
+                class="header-navigation__link current"
                 rel="noopener noreferrer nofollow"
                 >Портфоліо</a
               >
@@ -67,6 +67,89 @@
             >
           </li>
         </ul>
+        <button type="button" class="open-menu" data-menu-open>
+          <svg width="40" height="40" aria-label="Відкриття мобільного меню">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu is-hidden" data-menu>
+        <div class="container">
+          <div class="container-menu">
+            <nav class="mob-navigation">
+              <button type="button" class="close-menu" data-menu-close>
+                <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
+                  <use href="./images/icons.svg#icon-close-btn"></use>
+                </svg>
+              </button>
+              <ul class="mob-navigation__list list">
+                <li class="mob-navigation__item">
+                  <a
+                    href="./index.html"
+                    class="mob-navigation__link"
+                    rel="noopener noreferrer nofollow"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mob-navigation__item">
+                  <a
+                    href="./portfolio.html"
+                    class="mob-navigation__link current"
+                    rel="noopener noreferrer nofollow"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="mob-navigation__item">
+                  <a href="/" class="mob-navigation__link" rel="noopener noreferrer nofollow"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="mob-contact">
+              <ul class="mob-contact__list list">
+                <li class="mob-contact__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mob-contact__tel"
+                    rel="noopener noreferrer nofollow"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contact__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-contact__mail"
+                    rel="noopener noreferrer nofollow"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-social__list" list>
+                <li class="mob-social__item">
+                  <a href="/" class="mob-social__link" rel="noopener noreferrer nofollow"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mob-social__item">
+                  <a href="/" class="mob-social__link" rel="noopener noreferrer nofollow"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mob-social__item">
+                  <a href="/" class="mob-social__link" rel="noopener noreferrer nofollow"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mob-social__item">
+                  <a href="/" class="mob-social__link" rel="noopener noreferrer nofollow"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- hero portfolio -->
@@ -92,15 +175,42 @@
             </li>
           </ul>
           <ul class="portfolio-content__list list">
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project1.jpg"
-                    alt="дизайн-постер"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-desktop.jpg    1x,
+                        ./images/portfolio/project1-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-tablet.jpg    1x,
+                        ./images/portfolio/project1-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-mob.jpg    1x,
+                        ./images/portfolio/project1-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project1-desktop.jpg    1x,
+                        ./images/portfolio/project1-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project1-desktop.jpg"
+                      alt="Веб сайт"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -113,15 +223,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project2.jpg"
-                    alt="дизайн-постер"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-desktop.jpg    1x,
+                        ./images/portfolio/project2-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-tablet.jpg    1x,
+                        ./images/portfolio/project2-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-mob.jpg    1x,
+                        ./images/portfolio/project2-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project2-desktop.jpg    1x,
+                        ./images/portfolio/project2-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project2-desktop.jpg"
+                      alt="дизайн-постер"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -134,15 +271,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project3.jpg"
-                    alt="ресторан-додаток"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-desktop.jpg    1x,
+                        ./images/portfolio/project3-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-tablet.jpg    1x,
+                        ./images/portfolio/project3-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-mob.jpg    1x,
+                        ./images/portfolio/project3-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project3-desktop.jpg    1x,
+                        ./images/portfolio/project3-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project3-desktop.jpg"
+                      alt="Додаток-ресторан"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -155,15 +319,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project4.jpg"
-                    alt="музика-проект"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-desktop.jpg    1x,
+                        ./images/portfolio/project4-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-tablet.jpg    1x,
+                        ./images/portfolio/project4-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-mob.jpg    1x,
+                        ./images/portfolio/project4-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project4-desktop.jpg    1x,
+                        ./images/portfolio/project4-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project4-desktop.jpg"
+                      alt="Музичний-додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -176,15 +367,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project5.jpg"
-                    alt="коробка-проект"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-desktop.jpg    1x,
+                        ./images/portfolio/project5-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-tablet.jpg    1x,
+                        ./images/portfolio/project5-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-mob.jpg    1x,
+                        ./images/portfolio/project5-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project5-desktop.jpg    1x,
+                        ./images/portfolio/project5-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project5-desktop.jpg"
+                      alt="Додаток-коробки"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -197,15 +415,36 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project6.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-desktop.jpg    1x,
+                        ./images/portfolio/project6-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-tablet.jpg    1x,
+                        ./images/portfolio/project6-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-mob.jpg    1x,
+                        ./images/portfolio/project6-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img srcset=" ./images/portfolio/project6-desktop.jpg 1x,
+                    ./images/portfolio/project6-desktop-2x.jpg 2x "
+                    src="./images/portfolio/project6-desktop.jpg" alt="Веб-сайт width="370"
+                    height="294" />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -218,15 +457,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project7.jpg"
-                    alt="Видання"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-desktop.jpg    1x,
+                        ./images/portfolio/project7-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-tablet.jpg    1x,
+                        ./images/portfolio/project7-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-mob.jpg    1x,
+                        ./images/portfolio/project7-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project7-desktop.jpg    1x,
+                        ./images/portfolio/project7-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project7-desktop.jpg"
+                      alt="дизайн-постер"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -239,15 +505,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project8.jpg"
-                    alt="проект LabelTag"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-desktop.jpg    1x,
+                        ./images/portfolio/project8-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-tablet.jpg    1x,
+                        ./images/portfolio/project8-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-mob.jpg    1x,
+                        ./images/portfolio/project8-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project8-desktop.jpg    1x,
+                        ./images/portfolio/project8-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project8-desktop.jpg"
+                      alt="Проект-додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -260,15 +553,42 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-content__list-item">
-              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__list-link">
+            <li class="portfolio-content__item">
+              <a href="/" rel="noopener noreferrer nofollow" class="portfolio-content__link">
                 <div class="portfolio-content__thumb">
-                  <img
-                    src="./images/portfolio/img_project9.jpg"
-                    alt="додаток для бізнесу"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-desktop.jpg    1x,
+                        ./images/portfolio/project9-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-tablet.jpg    1x,
+                        ./images/portfolio/project9-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-mob.jpg    1x,
+                        ./images/portfolio/project9-mob-2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/project9-desktop.jpg    1x,
+                        ./images/portfolio/project9-desktop-2x.jpg 2x
+                      "
+                      src="./images/portfolio/project9-desktop.jpg"
+                      alt="Проект-додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="portfolio-content__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -287,7 +607,7 @@
     </main>
     <!-- basement(footer) -->
     <footer class="footer">
-      <div class="container flex-cont">
+      <div class="container">
         <div class="footer-logo-address">
           <a class="footer__logo" href="./index.html" rel="noopener noreferrer nofollow"
             ><span class="footer__logo-color">Web</span>Studio</a
@@ -371,7 +691,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
