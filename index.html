@@ -67,17 +67,23 @@
             >
           </li>
         </ul>
-        <button type="button" class="open-menu" data-menu-open>
+        <button type="button" class="open-menu" data-menu-open id="show" onClick="showDialog()">
           <svg width="40" height="40" aria-label="Відкриття мобільного меню">
             <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
           </svg>
         </button>
       </div>
-      <div class="menu is-hidden" data-menu>
+      <div class="menu is-hidden" data-menu id="dialog">
         <div class="container">
           <div class="container-menu">
             <nav class="mob-navigation">
-              <button type="button" class="close-menu" data-menu-close>
+              <button
+                type="button"
+                class="close-menu"
+                data-menu-close
+                id="close"
+                onClick="closeDialog()"
+              >
                 <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
                   <use href="./images/icons.svg#icon-close-btn"></use>
                 </svg>
@@ -156,7 +162,9 @@
     <main>
       <section class="hero">
         <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-        <button data-modal-open type="button" class="hero__button">Замовити послугу</button>
+        <button data-modal-open type="button" class="hero__button" id="show" onClick="showDialog()">
+          Замовити послугу
+        </button>
       </section>
       <!-- features -->
       <section class="section">
@@ -672,8 +680,8 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button data-modal-close class="modal__btn-close">
+      <div class="modal" id="dialog">
+        <button data-modal-close class="modal__btn-close" id="close" onClick="closeDialog()">
           <svg width="40" height="40" aria-label="Кнопка закриття модального вікна">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
@@ -727,5 +735,6 @@
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/no-scroll.js"></script>
   </body>
 </html>
