@@ -67,17 +67,20 @@
             >
           </li>
         </ul>
-        <button type="button" class="open-menu" data-menu-open>
+        <button
+          type="button"
+          class="open-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg width="40" height="40" aria-label="Відкриття мобільного меню">
             <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
           </svg>
         </button>
-      </div>
-      <div class="menu is-hidden" data-menu>
-        <div class="container">
-          <div class="container-menu">
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <div class="menu">
             <nav class="mob-navigation">
-              <button type="button" class="close-menu" data-menu-close>
+              <button type="button" class="close-menu js-close-menu">
                 <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
                   <use href="./images/icons.svg#icon-close-btn"></use>
                 </svg>

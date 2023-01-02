@@ -61,21 +61,18 @@
 .header-contact__list {
     display: flex;
     margin-left: auto;
-    align-items: center;
 
     @media screen and (max-width:767px) {
         display: none;
     }
 
-    @include tablet {
-        flex-wrap: wrap;
-        align-content: center;
+    @media screen and (max-width:1199px) {
+        flex-direction: column;
         padding-top: 21px;
         padding-bottom: 21px;
-        margin-left: 100px;
     }
     @include desktop{
-        align-content: center;
+        align-items: center;
         padding-top: 32px;
         padding-bottom: 32px;
         margin-left: auto;

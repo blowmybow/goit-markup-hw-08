@@ -69,7 +69,7 @@
         </ul>
         <button
           type="button"
-          class="open-menu menu-toggle js-open-menu"
+          class="open-menu js-open-menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -80,7 +80,7 @@
         <div class="menu-container js-menu-container" id="mobile-menu">
           <div class="menu">
             <nav class="mob-navigation">
-              <button type="button" class="close-menu menu-toggle js-close-menu">
+              <button type="button" class="close-menu js-close-menu">
                 <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
                   <use href="./images/icons.svg#icon-close-btn"></use>
                 </svg>
@@ -724,7 +724,9 @@
               >Умови договору</a
             >
           </label>
-          <button type="submit" class="modal-form__btn">Відправити</button>
+          <div class="modal-form__container-btn">
+            <button type="submit" class="modal-form__btn">Відправити</button>
+          </div>
         </form>
       </div>
     </div>
