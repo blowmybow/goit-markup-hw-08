@@ -67,23 +67,20 @@
             >
           </li>
         </ul>
-        <button type="button" class="open-menu" data-menu-open id="show" onClick="showDialog()">
+        <button
+          type="button"
+          class="open-menu menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg width="40" height="40" aria-label="Відкриття мобільного меню">
             <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
           </svg>
         </button>
-      </div>
-      <div class="menu is-hidden" data-menu id="dialog">
-        <div class="container">
-          <div class="container-menu">
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <div class="menu">
             <nav class="mob-navigation">
-              <button
-                type="button"
-                class="close-menu"
-                data-menu-close
-                id="close"
-                onClick="closeDialog()"
-              >
+              <button type="button" class="close-menu menu-toggle js-close-menu">
                 <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
                   <use href="./images/icons.svg#icon-close-btn"></use>
                 </svg>
@@ -162,9 +159,7 @@
     <main>
       <section class="hero">
         <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-        <button data-modal-open type="button" class="hero__button" id="show" onClick="showDialog()">
-          Замовити послугу
-        </button>
+        <button data-modal-open type="button" class="hero__button">Замовити послугу</button>
       </section>
       <!-- features -->
       <section class="section">
@@ -680,8 +675,8 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal" id="dialog">
-        <button data-modal-close class="modal__btn-close" id="close" onClick="closeDialog()">
+      <div class="modal">
+        <button data-modal-close class="modal__btn-close">
           <svg width="40" height="40" aria-label="Кнопка закриття модального вікна">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
@@ -733,8 +728,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/no-scroll.js"></script>
   </body>
 </html>
